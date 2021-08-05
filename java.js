@@ -199,6 +199,7 @@ let content = document.createElement('div');
 // this is just a parent element
 // add text content ass instruction asked
 // 2. The above created div should have text content of "Lets review DOM!"
+// using Text Node is better practice casue using .innerHTML is clunky, USE Text Node !
 let contentText = document.createTextNode('Lets review DOM!');
 
 // ! MUST DO ! add the newly made text node to the parent element
@@ -232,10 +233,12 @@ pRed.appendChild(pRedContent);
 // NOW ADD all this to the content div as the instruction asked
 content.appendChild(pRed);
 
+// if we had forms, we would need to essentially use event listeners and already created form tags on the html to to run when those consditions are met. refer to cookie stand. understand those also have cnstructor things going to apend to the table tags. Be Aware.
 // ========================End of part==========================//
 
 // // 4. Add an **h3** element with blue content that says “I’m a blue h3!” to the container element
 
+// ========================End of part==========================//
 
 // // 5. create a **div** ,that will at the end added to the main id container like we did with containerDiv.appendChild(''), element with a black border and pink background color with the following elements inside of it, This will ten be the parent of this set of child elements below, up until now we have been targeting the original parent element container:
 // we will be adding child elements to the div we make 
