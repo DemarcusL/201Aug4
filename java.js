@@ -183,12 +183,12 @@ let pet_list = [
 // //   5.3. **Hint for this one:** after creating the div with createElement, append the **h1** and **p** to it before adding it to the container.
 
 
-// we need to target that element by get id 
+// we need to target that main div element by its id elow which we will be adding things to the hardcoded HTML
 // define a variable to use it with
 let containerDiv = document.getElementById('container');
-//  add better checking to make sure you got it. good practice
+//  add better checking to make sure you got it. good practice only!
 
-// first we are doing this one
+// First we are doing this one
 // ​// 1. A **div** having a class name of "content"
 // think about the parent child relationship of elements. appendchild will add this inside the parent element which is container in this case.
 // this is a variable we are making to use it in DOM document interface
@@ -198,22 +198,46 @@ let containerDiv = document.getElementById('container');
 let content = document.createElement('div');
 // this is just a parent element
 // add text content ass instruction asked
+// 2. The above created div should have text content of "Lets review DOM!"
+let contentText = document.createTextNode('Lets review DOM!');
+
+// ! MUST DO ! add the newly made text node to the parent element
+// we added the new CHild element to the content div from the contentText variable we made.
+content.appendChild(contentText);
+
+// set class attribute to content as requirment asked
+// use classList and dot notate to add (.add) and add what we want in the parenthesis
+content.classList.add("content");
+
+// this puts it in the html div we set at the begining
+containerDiv.appendChild(content);
+// NOW Check The Console in the Browser so you can see and check it was added with this javascript. no hardcaode. but the webpage will change.
 
 
-// // 2. The above created div should have text content of "Lets review DOM!"
-// we are adding text content saying let review DOM
+// ========================End of part==========================//
+
+// // 3. create a paragraph element with red text content that says “Hey I’m red!”, add it to the Content div
+// give it red text styling, we can do with CSS or even here, see Kevins code of how he added styling here!
+
+// make a variable first for making all this
+let pRed = document.createElement("p");
+
+// add red text
+// make a varible for the content 
+let pRedContent = document.createTextNode("Hey I'm Red!!!");
+
+// we gave the newy created p element we made and appended the child text content by putting pRedContent
+pRed.appendChild(pRedContent);
+
+// NOW ADD all this to the content div as the instruction asked
+content.appendChild(pRed);
+
+// ========================End of part==========================//
+
+// // 4. Add an **h3** element with blue content that says “I’m a blue h3!” to the container element
 
 
-
-// // 3. create a paragraph element with red text content that says “Hey I’m red!”
-// give it red text styling
-
-
-
-// // 4. an **h3** element with blue content that says “I’m a blue h3!”
-
-
-// // 5. create a **div** ,that will at the end added to the dom with the id container, element with a black border and pink background color with the following elements inside of it, This will ten be the parent of this set of child elements below, up until now we have been targeting the original parent element container:
+// // 5. create a **div** ,that will at the end added to the main id container like we did with containerDiv.appendChild(''), element with a black border and pink background color with the following elements inside of it, This will ten be the parent of this set of child elements below, up until now we have been targeting the original parent element container:
 // we will be adding child elements to the div we make 
 
 // //   5.1. add a **h1** child element that says with text content “I’m in a div”
