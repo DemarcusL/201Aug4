@@ -172,7 +172,7 @@ let pet_list = [
 //==================================== End of Answer ===============================//
 
 // #6 DOM
-// // ### Add the following elements to the container using ONLY javascript and the DOM methods shown above.
+// // ### Add the following elements to the container using ONLY javascript and the DOM methods.
 // ​// 1. A **div** having a class name of "content"
 // // 2. The above created div should have text content of "Lets review DOM!"
 // // 3. a **p** with red text that says “Hey I’m red!”
@@ -181,9 +181,11 @@ let pet_list = [
 // //   5.1. another **h1** that says “I’m in a div”
 // //   5.2. a **p** that says “ME TOO!”
 // //   5.3. **Hint for this one:** after creating the div with createElement, append the **h1** and **p** to it before adding it to the container.
+// ========================================= End of Instructions ========================================= //
 
+// Let saves us from using var cause we can set the let once and reuse it such as below.
 
-// we need to target that main div element by its id elow which we will be adding things to the hardcoded HTML
+// we need to target that main div element by its id below which we will be adding things to in the hardcoded HTML
 // define a variable to use it with
 let containerDiv = document.getElementById('container');
 //  add better checking to make sure you got it. good practice only!
